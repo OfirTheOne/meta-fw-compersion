@@ -1,6 +1,7 @@
 'use client'
 import { upsertNoteAction } from "@/actions/upsert-note.action";
 import React, { useState } from "react";
+import Link from "@/components/Link";
 
 interface CreateOrNoteProps {
   CreateOrUpdate: "Create";
@@ -27,6 +28,16 @@ export default function CreateOrUpdateNoteForm(
   
     return (
       <div className="container mx-auto py-8">
+        <Link
+        href="/"
+        type="submit"
+        className="absolute top-2 right-2 text-gray-500 hover:text-red-500"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+          <path fillRule="evenodd" d="M9.53 2.47a.75.75 0 010 1.06L4.81 8.25H15a6.75 6.75 0 010 13.5h-3a.75.75 0 010-1.5h3a5.25 5.25 0 100-10.5H4.81l4.72 4.72a.75.75 0 11-1.06 1.06l-6-6a.75.75 0 010-1.06l6-6a.75.75 0 011.06 0z" clipRule="evenodd" />
+        </svg>
+
+      </Link>
         <h1 className="text-2xl font-semibold mb-4">{props.CreateOrUpdate === "Create" ? "Create" : "Update"} a Note</h1>
         <form method="POST" action={upsertNoteAction}>
           <div className="mb-4">
