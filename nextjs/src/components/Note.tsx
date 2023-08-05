@@ -1,7 +1,4 @@
 
-// import { revalidatePath } from "next/cache";
-// import { redirect } from 'next/navigation'
-// import { deleteNote } from "@/db/notes.service";
 import Link from "@/components/Link";
 import { NoteModel } from "@/types/note-model";
 import { CloseButton } from "./CloseButton";

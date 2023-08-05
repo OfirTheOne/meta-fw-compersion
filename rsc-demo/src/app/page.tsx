@@ -9,7 +9,9 @@ export default async function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
          <ul>
         {todos.map(todo => (
-          <li key={todo.id}>{todo.title}</li>
+          <Link href={`/${todo.id}`} key={todo.id}>
+            <li className={todo.completed ? 'line-through' : ''} key={todo.id}>{todo.title}</li>
+          </Link>
         ))}
       </ul>
       <Link href="/add" className="text-white text-xl">

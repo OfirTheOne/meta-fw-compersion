@@ -1,6 +1,6 @@
 import { getAllNotes } from "@/db/notes.service";
 import Link from "@/components/Link";
-import { Note } from "./(Note)";
+import { Note } from "@/components/Note";
 
 
 

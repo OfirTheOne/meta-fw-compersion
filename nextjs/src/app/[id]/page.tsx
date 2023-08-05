@@ -1,6 +1,6 @@
 import React from "react";
-import CreateOrUpdateNoteForm from "../(CreateOrUpdateNoteForm)";
-import { getNoteById } from "@/db/notes.service";
+import CreateOrUpdateNoteForm from "@/components/CreateOrUpdateNoteForm";
+import { getNoteById } from "@/db/notes-remote.service";
 
 export default async function Page({ params }: { params: { id: string } }) {
     const note = await getNoteById(params.id);
